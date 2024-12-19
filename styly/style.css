@@ -1,0 +1,100 @@
+body{
+    background-color: #af6c00;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.logo{
+    margin: 1px;
+}
+
+/* Styly pro footer */
+footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+    margin-top: auto; /* Zajistí, že footer bude na spodní straně */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 48%; /* levá část */
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 48%; /* pravá část */
+}
+
+.footer-content p, .footer-form p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.footer-content a {
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+/* Styly pro formulář*/
+.form-input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-button:hover {
+    background-color: #ff7f00;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin: auto;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content, .footer-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-input, .form-button {
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}

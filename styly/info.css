@@ -1,0 +1,73 @@
+a{
+    text-decoration: none; /* Zruší podtržení */
+}
+
+.full-width-line {
+    width: 100%; /* Nastaví šířku na 100% */
+    height: 100px; /* Výška čáry (dle potřeby) */
+    background-color: #333; /* Barva pozadí čáry */
+    display: flex; /* Umožní vložit obsah do čáry */
+    justify-content: center; /* Horizontálně centrování obsahu */
+    align-items: center; /* Vertikálně centrování obsahu */
+    margin-top: 100px;
+    padding-bottom: 10px;
+}
+
+.full-width-line img {
+    max-width: 100%; /* Obrázky se přizpůsobí šířce čáry */
+    height: 100px; /* Zachová poměr stran obrázku */
+    padding: 10px; /* Okraje mezi obrázky */
+    
+}
+
+.information {
+    display: flex; /* Umožní, aby byly položky vedle sebe */
+    justify-content: space-between; /* Rozdělí prostor mezi text a obrázek */
+    align-items: center; /* Vertikálně centrování obsahu */
+    padding-left: 30px; /* Okraje pro lepší vzhled */
+    padding-right: 30px;
+    padding-top: 100px;
+}
+
+/* Styl pro textovou část */
+.textinfo {
+    flex: 1; /* Text bude zabírat 50% šířky sekce */
+    padding-right: 20px; /* Mezera mezi textem a obrázkem */
+    font-size: 18px; /* Velikost písma pro text */
+    line-height: 1.6; /* Zlepšení čitelnosti textu */
+    text-align: center;
+}
+
+/* Styl pro obrázkovou část */
+.imageinfo {
+    flex: 1; /* Obrázek bude zabírat druhou polovinu šířky sekce */
+    max-width: 100%; /* Obrázek se přizpůsobí šířce bloku */
+}
+
+/* Styl pro obrázek */
+.imageinfo img {
+    width: 100%; /* Obrázek bude mít 100% šířky divu */
+    height: auto; /* Poměr stran obrázku bude zachován */
+    border-radius: 8px; /* Zaoblení rohů obrázku */
+}
+
+.prvni{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .information {
+        flex-direction: column;  /* Změní uspořádání na sloupec */
+        text-align: center;      /* Zarovná text na střed */
+    }
+
+    .imageinfo {
+        margin-top: 20px;  /* Přidá prostor mezi textem a obrázkem */
+        width: 100%;       /* Zajistí, že obrázek bude mít plnou šířku */
+    }
+
+    .imageinfo img {
+        max-width: 100%;    /* Zajistí, že obrázek se přizpůsobí šířce obrazovky */
+        height: auto;       /* Zachová poměr stran obrázku */
+    }
+}

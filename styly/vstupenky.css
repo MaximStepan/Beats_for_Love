@@ -1,0 +1,84 @@
+.ticket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.ticket {
+    display: flex;
+    align-items: center; /* Zarovná prvky vertikálně na střed */
+    border-top: 2px solid #000000;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.ticket img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ticket-text {
+    flex: 1; /* Zabere celý volný prostor mezi obrázkem a tlačítkem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ticket-text h3,
+.ticket-text p {
+    margin: 0;
+    white-space: nowrap; /* Zabraňuje zalomení textu na další řádek */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Zkrátí dlouhý text tečkami */
+}
+
+.ticket-btn {
+    flex-shrink: 0; /* Zabrání zmenšení tlačítka */
+}
+
+.btn {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-transform: uppercase;
+    white-space: nowrap; /* Zabrání zalomení textu v tlačítku */
+}
+
+.btn:hover {
+    background-color: #ff4444;
+}
+
+/* Responzivní nastavení */
+@media (max-width: 768px) {
+    .ticket {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ticket img {
+        width: 100%;
+        height: auto;
+    }
+
+    .ticket-btn {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+body{
+    padding-top: 100px;
+}
+
+.btn2{
+    text-decoration: none;
+    color: #fff;
+}

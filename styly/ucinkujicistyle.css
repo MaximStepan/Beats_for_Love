@@ -1,0 +1,83 @@
+/* Základní styl pro boxy */
+body {
+    margin-top: 60px;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    margin: 38px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; /* Skrytí přebytečného obsahu */
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Skrytí přetékajícího textu a obrázků */
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Udržuje obrázek na celé ploše */
+    opacity: 1; /* Tmavší obrázek, aby text byl viditelný */
+    transition: opacity 0.3s ease;
+}
+
+.image-box h1 {
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 2rem;
+    z-index: 2;
+    opacity: 0; /* Skrýt text až do hoveru */
+    transition: opacity 0.3s ease;
+}
+
+.image-box p {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Skrýt popis až do hoveru */
+    transition: opacity 0.3s ease;
+}
+
+.image-box:hover img {
+    opacity: 0.1; /* Po najetí myší obrázek bude jasnější */
+}
+
+.image-box:hover h1, .image-box:hover p {
+    opacity: 1; /* Při hoveru se objeví text a popis */
+}
+
+/* Vytvoření responzivních pravidel */
+@media only screen and (max-width: 768px) {
+    .nadpisek h1 {
+        font-size: 24px; /* Menší velikost nadpisu na mobilních zařízeních */
+    }
+    
+    .podnadpis p {
+        font-size: 14px; /* Menší text na mobilních zařízeních */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .box {
+        width: 100%; /* Boxy zabírají celou šířku na mobilu */
+    }
+
+    .image-box img {
+        max-width: 100%; /* Obrázky budou mít maximálně 100% šířky obrazovky */
+    }
+}
+
+

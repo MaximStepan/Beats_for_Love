@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vstupenky</title>
+    <link rel="stylesheet" href="styly/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            background-color: #af6c00;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo{
+            margin: 1px;
+        }
+
+        /* Styl pro formulář */
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        /* Hamburger menu stylování */
+        .hamburger {
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+        }
+
+        /* Pro responsivitu - mobilní zařízení */
+        @media screen and (max-width: 600px) {
+            /* Skrytí navigačního menu na mobilu */
+            #navLinks {
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            #navLinks.show {
+                display: block;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            li {
+                width: 100%;
+                text-align: left;
+            }
+
+            li a {
+                padding: 10px 20px;
+            }
+
+            /* Styl pro hamburger ikonu */
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 1100;
+            }
+
+            .hamburger div {
+                background-color: white;
+                height: 4px;
+                width: 30px;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            .hamburger.active div:nth-child(1) {
+                transform: rotate(-45deg);
+                position: relative;
+                top: 10px;
+            }
+
+            .hamburger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active div:nth-child(3) {
+                transform: rotate(45deg);
+                position: relative;
+                top: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <!-- Hamburger ikona pro mobilní zařízení -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigační menu -->
+        <ul id="navLinks">
+            <li class="logo"><a href="index.html"><img src="images/file.png" alt="Logo"></a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="ucinkujici.html">Účinkující</a></li>
+            <li><a href="vstupenky.html">Vstupenky</a></li>
+            <li><a href="informace.html">Informace</a></li>
+            <li><a href="DJs.html">Minulí DJs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Formulář uprostřed stránky -->
+    <div class="form-container">
+        <h2>Registrace pro předběžné zaslání vstupenek</h2>
+        <form action="#" method="post">
+            <label for="firstName">Jméno:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Příjmení:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="lastName">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="country">Země:</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="city">Město:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="street">Ulice:</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="postalCode">PSČ:</label>
+            <input type="text" id="postalCode" name="postalCode" required>
+
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+    
+</body>
+</html>
+

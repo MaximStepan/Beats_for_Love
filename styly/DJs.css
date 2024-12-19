@@ -1,0 +1,66 @@
+.nadpisy{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 40px;
+}
+
+.obrazky {
+    display: flex;             /* Zapne flexbox pro rodičovský element */
+    justify-content: center;   /* Horizontálně centrování obrázků */
+    align-items: center;       /* Vertikálně centrování obrázků */
+    padding-top: 10px;
+}
+
+.obrazek {
+    width: 500px;               /* Nastavte šířku obrázku, např. 80% šířky rodičovského elementu */
+    height: 500px;             /* Zachování poměru stran obrázku */
+}
+
+.information {
+    display: flex; /* Umožní, aby byly položky vedle sebe */
+    justify-content: space-between; /* Rozdělí prostor mezi text a obrázek */
+    align-items: center; /* Vertikálně centrování obsahu */
+    padding-left: 30px; /* Okraje pro lepší vzhled */
+    padding-right: 30px;
+    padding-top: 100px;
+}
+
+/* Styl pro textovou část */
+.textinfo {
+    flex: 1; /* Text bude zabírat 50% šířky sekce */
+    padding-right: 20px; /* Mezera mezi textem a obrázkem */
+    font-size: 18px; /* Velikost písma pro text */
+    line-height: 1.6; /* Zlepšení čitelnosti textu */
+    text-align: center;
+    padding-left: 20px;
+}
+
+/* Styl pro obrázkovou část */
+.imageinfo {
+    flex: 1; /* Obrázek bude zabírat druhou polovinu šířky sekce */
+    max-width: 100%; /* Obrázek se přizpůsobí šířce bloku */
+}
+
+/* Styl pro obrázek */
+.imageinfo img {
+    width: 100%; /* Obrázek bude mít 100% šířky divu */
+    height: auto; /* Poměr stran obrázku bude zachován */
+    border-radius: 8px; /* Zaoblení rohů obrázku */
+}
+
+@media (max-width: 768px) {
+    .information {
+        flex-direction: column;  /* Změní uspořádání na sloupec */
+        text-align: center;      /* Zarovná text na střed */
+    }
+
+    .imageinfo {
+        margin-top: 20px;  /* Přidá prostor mezi textem a obrázkem */
+        width: 100%;       /* Zajistí, že obrázek bude mít plnou šířku */
+    }
+
+    .imageinfo img {
+        max-width: 100%;    /* Zajistí, že obrázek se přizpůsobí šířce obrazovky */
+        height: auto;       /* Zachová poměr stran obrázku */
+    }
+}
