@@ -1,3 +1,43 @@
+<?php
+include('db.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $country = $_POST['country'];
+    $city = $_POST['city'];
+    $street = $_POST['street'];
+
+    // Dny, pokud jsou zaškrtnuté (nastavené na "Ano"), jinak na "Ne"
+    $lovecamp = isset($_POST['lovecamp']) ? "Ano" : "Ne";
+    $lovevillage = isset($_POST['lovevillage']) ? "Ano" : "Ne";
+    $tentvillage = isset($_POST['tentvillage']) ? "Ano" : "Ne";
+    $karavancamp = isset($_POST['karavancamp']) ? "Ano" : "Ne";
+
+    // Vložení uživatele do tabulky uzivatel
+    $query = "INSERT INTO uzivatel (Jmeno, Prijmeni, Email, Zeme, Mesto, Ulice) 
+              VALUES ('$firstName', '$lastName', '$email', '$country', '$city', '$street')";
+
+    if ($conn->query($query) === TRUE) {
+        // Získání ID nově vloženého uživatele
+        $user_id = $conn->insert_id;
+
+        // Vložení vstupenky pro uživatele
+        $query_tickets = "INSERT INTO camp (ID_uzivatel, Love_camp, Love_village, Tent_village, Karavan_camp) 
+                          VALUES ('$user_id', '$lovecamp', '$lovevillage', '$tentvillage', '$karavancamp')";
+
+        if ($conn->query($query_tickets) === TRUE) {
+            $message = "Úspěšně bylo odesláno.";
+        } else {
+            $message = "Chyba při ukládání vstupenek: " . $conn->error;
+        }
+    } else {
+        $message = "Chyba při ukládání uživatele: " . $conn->error;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,6 +155,23 @@
             background-color: #333;
         }
 
+        .message-container {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .message {
+            margin: 0;
+        }
+
         /* Pro responsivitu - mobilní zařízení */
         @media screen and (max-width: 600px) {
             /* Skrytí navigačního menu na mobilu */
@@ -199,6 +256,10 @@
         </ul>
     </nav>
 
+    <div class="message-container">
+        <?php if (isset($message)) echo "<p class='message'>$message</p>"; ?>
+    </div>
+
     <!-- Formulář pro registraci -->
     <div class="form-container">
         <h2>Registrace pro předběžné zaslání vstupenek do kempu Beats for Love</h2>
@@ -224,20 +285,20 @@
             <!-- Checkboxy pro výběr dnů festivalu -->
             <div class="checkbox-group">
                 <div>
-                    <input type="checkbox" id="dayone" name="dayone" value="1">
-                    <label for="dayone">Love camp</label>
+                    <input type="checkbox" id="lovecamp" name="lovecamp" value="1">
+                    <label for="lovecamp">Love camp</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="daytwo" name="daytwo" value="2">
-                    <label for="daytwo">Love village</label>
+                    <input type="checkbox" id="lovevillage" name="lovevillage" value="2">
+                    <label for="lovevillage">Love village</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="daythree" name="daythree" value="3">
-                    <label for="daythree">Tent village</label>
+                    <input type="checkbox" id="tentvillage" name="tentvillage" value="3">
+                    <label for="tentvillage">Tent village</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="dayfour" name="dayfour" value="4">
-                    <label for="dayfour">Karavan camp</label>
+                    <input type="checkbox" id="karavancamp" name="karavancamp" value="4">
+                    <label for="karavancamp">Karavan camp</label>
                 </div>
             </div>
 

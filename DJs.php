@@ -1,3 +1,38 @@
+<?php
+include('db.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $country = $_POST['country'];
+    $city = $_POST['city'];
+    $street = $_POST['street'];
+    $comment = $_POST['comment'];
+
+    // Vložení uživatele do tabulky uzivatel
+    $query = "INSERT INTO uzivatel (Jmeno, Prijmeni, Email, Zeme, Mesto, Ulice) 
+              VALUES ('$firstName', '$lastName', '$email', '$country', '$city', '$street')";
+
+    if ($conn->query($query) === TRUE) {
+        // Získání ID nově vloženého uživatele
+        $user_id = $conn->insert_id;
+
+        // Vložení vstupenky pro uživatele
+        $query_tickets = "INSERT INTO komentar (ID_uzivatel, Komentar) 
+                          VALUES ('$user_id', '$comment')";
+
+        if ($conn->query($query_tickets) === TRUE) {
+            $message = "Úspěšně bylo odesláno.";
+        } else {
+            $message = "Chyba při ukládání vstupenek: " . $conn->error;
+        }
+    } else {
+        $message = "Chyba při ukládání uživatele: " . $conn->error;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,12 +213,17 @@ Guetta je držitelem několika Grammy Awards a dalších prestižních ocenění
 
         <div class="footer-form">
             <p><strong>Máte nějaký dotaz?</strong></p>
+            <div class="message-container">
+                <?php if (isset($message)) echo "<p class='message'>$message</p>"; ?>
+            </div>
             <form action="" method="POST">
-                <input class="form-input" type="text" name="jmeno" placeholder="Jméno" required>
-                <input class="form-input" type="text" name="prijmeni" placeholder="Příjmení" required>
+                <input class="form-input" type="text" name="firstName" placeholder="Jméno" required>
+                <input class="form-input" type="text" name="lastName" placeholder="Příjmení" required>
                 <input class="form-input" type="email" name="email" placeholder="Email" required>
-                <input class="form-input" type="text" name="mesto" placeholder="Město" required>
-                <textarea class="form-input" name="dotaz" placeholder="Váš dotaz" rows="4" required></textarea><br>
+                <input class="form-input" type="text" name="country" placeholder="Země" required>
+                <input class="form-input" type="text" name="city" placeholder="Město" required>
+                <input class="form-input" type="text" name="street" placeholder="Ulice" required>
+                <textarea class="form-input" name="comment" placeholder="Váš dotaz" rows="4" required></textarea><br>
                 <button class="form-button" type="submit">Odeslat</button>
             </form>
         </div>
