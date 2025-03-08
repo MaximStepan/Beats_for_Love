@@ -20,12 +20,12 @@
         </div>
         <!-- Navigační menu -->
         <ul id="navLinks">
-            <li class="logo"><a href="index.html"><img src="images/file.png" alt="Logo"></a></li>
-            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-            <li><a href="ucinkujici.html">Účinkující</a></li>
-            <li><a href="vstupenky.html">Vstupenky</a></li>
-            <li><a href="informace.html">Informace</a></li>
-            <li><a href="DJs.html">Minulí DJs</a></li>
+            <li class="logo"><a href="index.php"><img src="images/file.png" alt="Logo"></a></li>
+            <li><a href="index.php"><i class="fas fa-home"></i></a></li>
+            <li><a href="ucinkujici.php">Účinkující</a></li>
+            <li><a href="vstupenky.php">Vstupenky</a></li>
+            <li><a href="informace.php">Informace</a></li>
+            <li><a href="DJs.php">Minulí DJs</a></li>
         </ul>
     </nav>
 
@@ -40,13 +40,13 @@
         <div class="textinfo">
             <h2 class="prvni">Základní informace</h2><br>
             <p>
-                <p><strong>Co je Beats for Love?</strong></p> <br>
+                <p class="fest-info"><strong>Co je Beats for Love?</strong></p> <br>
                 Beats for Love je jeden z největších a nejvýznamnějších festivalů elektronické hudby v České republice. Festival spojuje fanoušky různých žánrů elektronické hudby, včetně EDM, dubstepu, house, trance, drum'n'bass a mnoha dalších. Každoročně přitahuje tisíce návštěvníků z celého světa a nabízí nezapomenutelný zážitek v atmosféře plné hudby, tance a vizuálních efektů. Hlavním představitelem tohoto festivalu je Kamil Rudolf<br><br>
-                <p><strong>Mise festivalu</strong></p> <br>
+                <p class="fest-info"><strong>Mise festivalu</strong></p> <br>
                 Beats for Love je oslavou elektronické hudby a kultury, která propojuje lidi všech věkových kategorií a národností. Cílem festivalu je nabídnout návštěvníkům nejen skvělé hudební zážitky, ale i podporu kreativity, umění a vzájemného sdílení hudební vášnivosti. <br><br>
-                <p><strong>Datum a místo konání</strong></p> <br>
+                <p class="fest-info"><strong>Datum a místo konání</strong></p> <br>
                 Beats for Love se koná každoročně v Ostravě v Dolních Vítkovicích. Festival probíhá po dobu 4 dnů od 2.7.2025 do 5.7.2025. <br><br>
-                <p><strong>Doprava</strong></p> <br>
+                <p class="fest-info"><strong>Doprava</strong></p> <br>
                 Festival se nachází v Dolních Vítkovicích, která je snadno dostupná autem, vlakem a autobusem. Více informací o dopravních možnostech naleznete na našich stránkách v sekci "Doprava".
             </p>
         </div>
@@ -91,10 +91,10 @@
             <p>Telefon: +420 123 456 789</p>
             <p>Adresa: Náměstí 123, Praha, Česká republika</p>
             <p><strong>Mohlo by vás zajímat:</strong></p><br>
-            <a href="ucinkujici.html">Interpreti pro rok 2025</a><br>
-            <a href="vstupenky.html">Vstupenky</a><br>
-            <a href="informace.html">Základní informace</a><br>
-            <a href="DJs.html">Neznámější DJs na festivalu</a><br>
+            <a href="ucinkujici.php">Interpreti pro rok 2025</a><br>
+            <a href="vstupenky.php">Vstupenky</a><br>
+            <a href="informace.php">Základní informace</a><br>
+            <a href="DJs.php">Neznámější DJs na festivalu</a><br>
         </div>
 
         <div class="footer-form">

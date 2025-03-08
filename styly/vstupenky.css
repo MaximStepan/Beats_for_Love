@@ -82,3 +82,14 @@ body{
     text-decoration: none;
     color: #fff;
 }
+
+.nadpisek{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.ticket:hover img{
+    filter: brightness(1.2); /* Zesvětlení obrázku */
+}

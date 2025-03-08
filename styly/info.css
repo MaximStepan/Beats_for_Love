@@ -55,6 +55,10 @@ a{
     text-align: center;
 }
 
+.fest-info{
+    border-bottom: 2px solid #000000;
+}
+
 @media (max-width: 768px) {
     .information {
         flex-direction: column;  /* Změní uspořádání na sloupec */

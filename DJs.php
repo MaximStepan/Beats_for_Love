@@ -21,12 +21,12 @@
         </div>
         <!-- Navigační menu -->
         <ul id="navLinks">
-            <li class="logo"><a href="index.html"><img src="images/file.png" alt="Logo"></a></li>
-            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-            <li><a href="ucinkujici.html">Účinkující</a></li>
-            <li><a href="vstupenky.html">Vstupenky</a></li>
-            <li><a href="informace.html">Informace</a></li>
-            <li><a href="DJs.html">Minulí DJs</a></li>
+            <li class="logo"><a href="index.php"><img src="images/file.png" alt="Logo"></a></li>
+            <li><a href="index.php"><i class="fas fa-home"></i></a></li>
+            <li><a href="ucinkujici.php">Účinkující</a></li>
+            <li><a href="vstupenky.php">Vstupenky</a></li>
+            <li><a href="informace.php">Informace</a></li>
+            <li><a href="DJs.php">Minulí DJs</a></li>
         </ul>
     </nav>
 
@@ -170,10 +170,10 @@ Guetta je držitelem několika Grammy Awards a dalších prestižních ocenění
             <p>Telefon: +420 123 456 789</p>
             <p>Adresa: Náměstí 123, Praha, Česká republika</p>
             <p><strong>Mohlo by vás zajímat:</strong></p><br>
-            <a href="ucinkujici.html">Interpreti pro rok 2025</a><br>
-            <a href="vstupenky.html">Vstupenky</a><br>
-            <a href="informace.html">Základní informace</a><br>
-            <a href="DJs.html">Neznámější DJs na festivalu</a><br>
+            <a href="ucinkujici.php">Interpreti pro rok 2025</a><br>
+            <a href="vstupenky.php">Vstupenky</a><br>
+            <a href="informace.php">Základní informace</a><br>
+            <a href="DJs.php">Neznámější DJs na festivalu</a><br>
         </div>
 
         <div class="footer-form">

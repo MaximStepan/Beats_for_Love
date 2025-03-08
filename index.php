@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         #showcase {
-            background: #333 url("/images/main1.jpg") no-repeat center center/cover;
+            background: #333 url("images/main1.jpg") no-repeat center center/cover;
             height: 120vh;
             color: white;
             display: flex;
@@ -44,12 +44,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding: 20px;
+            padding: 18px;
         }
 
         .text {
             flex: 1;
             padding-right: 20px;
+            font-size: 20px;
         }
 
         .video-container {
@@ -95,19 +96,19 @@
         </div>
         <!-- Navigační menu -->
         <ul id="navLinks">
-            <li class="logo"><a href="index.html"><img src="images/file.png" alt="Logo"></a></li>
-            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-            <li><a href="ucinkujici.html">Účinkující</a></li>
-            <li><a href="vstupenky.html">Vstupenky</a></li>
-            <li><a href="informace.html">Informace</a></li>
-            <li><a href="DJs.html">Minulí DJs</a></li>
+            <li class="logo"><a href="index.php"><img src="images/file.png" alt="Logo"></a></li>
+            <li><a href="index.php"><i class="fas fa-home"></i></a></li>
+            <li><a href="ucinkujici.php">Účinkující</a></li>
+            <li><a href="vstupenky.php">Vstupenky</a></li>
+            <li><a href="informace.php">Informace</a></li>
+            <li><a href="DJs.php">Minulí DJs</a></li>
         </ul>
     </nav>
 
     <div id="showcase">
         <div class="showcase-content">
             <h1 class="heading">BEATS FOR LOVE</h1>
-            <a href="vstupenky.html" class="btn">Vstupenky</a>
+            <a href="vstupenky.php" class="btn">Vstupenky</a>
             <!-- Nové tlačítko -->
             
         </div>
@@ -127,7 +128,7 @@
                 Nejnovější trendy elektronické hudby, od house až po techno <br>
                 Nezapomenutelné zážitky v atmosféře plné energie <br>
                 Magická energie, která vás pohltí od první chvíle <br> <br>
-                <p><strong>Vstupenky</strong></p><br> Vstupenky jsou již v prodeji! Nečekejte, rezervujte si své místo na Beats for Love 2024 a buďte součástí této obrovské hudební revoluce. <br> <br>
+                <p><strong>Vstupenky</strong></p><br> Vstupenky jsou již v prodeji! Nečekejte, rezervujte si své místo na Beats for Love 2025 a buďte součástí této obrovské hudební revoluce. <br> <br>
                 <p><strong>Lokace</strong></p><br> Místo, které vás nadchne a přenese do jiného světa. Beats for Love se koná na krásné a strategické lokalitě, která zaručuje pohodlí i skvělý přístup pro všechny návštěvníky. <br> <br>
                 <p><strong>Připojte se k nám!</strong></p><br> Nezáleží na tom, zda jste veterán nebo nováček, na Beats for Love je pro každého místo. Nenechte si ujít příležitost být součástí největšího hudebního svátku roku. <br> <br>
                 <p><strong>Kdy?</strong></p><br> Datum festivalu je 2.-5.7.2025. Připravte se na víkend plný skvělé hudby, zábavy a spousty příležitostí k navázání nových přátelství!
@@ -135,11 +136,11 @@
         </div>
 
         <div class="video-container">
-            <!-- Vlastní video soubor -->
+            <!-- video soubor -->
             <video controls>
                 <source src="images/video.mp4" type="video/mp4">
                 
-                Váš prohlížeč nepodporuje přehrávání videa.
+                
             </video>
         </div>
     </div>
@@ -153,10 +154,10 @@
             <p>Telefon: +420 123 456 789</p>
             <p>Adresa: Náměstí 123, Praha, Česká republika</p>
             <p><strong>Mohlo by vás zajímat:</strong></p><br>
-            <a href="ucinkujici.html">Interpreti pro rok 2025</a><br>
-            <a href="vstupenky.html">Vstupenky</a><br>
-            <a href="informace.html">Základní informace</a><br>
-            <a href="DJs.html">Neznámější DJs na festivalu</a><br>
+            <a href="ucinkujici.php">Interpreti pro rok 2025</a><br>
+            <a href="vstupenky.php">Vstupenky</a><br>
+            <a href="informace.php">Základní informace</a><br>
+            <a href="DJs.php">Neznámější DJs na festivalu</a><br>
         </div>
 
         <div class="footer-form">

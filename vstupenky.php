@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="./styly/style.css">
     <link rel="icon" type="file/png" href="images/file.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/styly/vstupenky.css">
+    <link rel="stylesheet" href="styly/vstupenky.css">
     <title>Vstupenky</title>
     <style>
-        
         
     </style>
 </head>
@@ -24,111 +23,90 @@
         </div>
         <!-- Navigační menu -->
         <ul id="navLinks">
-            <li class="logo"><a href="index.html"><img src="images/file.png" alt="Logo"></a></li>
-            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-            <li><a href="ucinkujici.html">Účinkující</a></li>
-            <li><a href="vstupenky.html">Vstupenky</a></li>
-            <li><a href="informace.html">Informace</a></li>
-            <li><a href="DJs.html">Minulí DJs</a></li>
+            <li class="logo"><a href="index.php"><img src="images/file.png" alt="Logo"></a></li>
+            <li><a href="index.php"><i class="fas fa-home"></i></a></li>
+            <li><a href="ucinkujici.php">Účinkující</a></li>
+            <li><a href="vstupenky.php">Vstupenky</a></li>
+            <li><a href="informace.php">Informace</a></li>
+            <li><a href="DJs.php">Minulí DJs</a></li>
         </ul>
     </nav>
+
+    <div class="nadpisek">
+        <h1>Vstupenky</h1>
+    </div>
 
     <div class="ticket-container">
         <!-- Jedna vstupenka -->
         <div class="ticket">
-            <img src="images/blue.avif" alt="Standardní vstupenka">
-            <div class="ticket-text">
-                <h3>Celofestivalová vstupenka 2. - 5.7.2025</h3>
-                <p>Standard (4 dny)</p>
-                <p>Cena: 3829 kč</p>
-            </div>
-            <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
-            </div>
-        </div>
-
-        <div class="ticket">
-            <img src="images/gold.jpg" alt="VIP vstupenka">
-            <div class="ticket-text">
-                <h3>V.I.P. Celofestivalová vstupenka 2. - 5.7.2025</h3>
-                <p>V.I.P. (4 dny)</p>
-                <p>Cena: 7789 kč</p>
-            </div>
-            <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
-            </div>
-        </div>
-    
-    
-        <div class="ticket">
-            <img src="images/green.jpg" alt="Jednodenní vstupenka">
+            <a href="vstupenkydotaz.php"><img src="images/green.jpg" alt="Jednodenní vstupenka"></a>
             <div class="ticket-text">
                 <h3>Standard jednodenní vstupenka 2. - 5.7.2025</h3>
-                <p>Standard (1 den)</p>
+                <p>Standard (1 - 4 dny)</p>
                 <p>Cena: 1859 kč</p>
             </div>
             <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
+                <button class="btn"><a href="vstupenkydotaz.php" class="btn2">VSTUPENKY</a></button>
             </div>
         </div>
 
         <div class="ticket">
-            <img src="images/grey.jpg" alt="V.I.P. jednodenní vstupenka">
+            <a href="vstupenkydotaz.php"><img src="images/grey.jpg" alt="V.I.P. jednodenní vstupenka"></a>
             <div class="ticket-text">
                 <h3>V.I.P. jednodenní vstupenka 2. - 5.7.2025</h3>
-                <p>V.I.P. (1 den)</p>
+                <p>V.I.P. (1 - 4 dny)</p>
                 <p>Cena: 4139 kč</p>
             </div>
             <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
+                <button class="btn"><a href="vstupenkydotaz.php" class="btn2">VSTUPENKY</a></button>
             </div>
         </div>
 
         <div class="ticket">
-            <img src="images/pink.jpg" alt="Love camp vstupenka">
+            <a href="campdotaz.php"><img src="images/pink.jpg" alt="Love camp vstupenka"></a>
             <div class="ticket-text">
                 <h3>Love Camp 1. - 6.7.2025</h3>
                 <p>Camp (6 dnů)</p>
                 <p>Cena: 3189 kč</p>
             </div>
             <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
+                <button class="btn"><a href="campdotaz.php" class="btn2">VSTUPENKY</a></button>
             </div>
         </div>
 
         <div class="ticket">
-            <img src="images/light blue.jpg" alt="Love village vstupenka">
+            <a href="campdotaz.php"><img src="images/light blue.jpg" alt="Love village vstupenka"></a>
             <div class="ticket-text">
                 <h3>Love Village 1. - 6.7.2025</h3>
                 <p>Village (6 dnů)</p>
                 <p>Cena: 15599 kč</p>
             </div>
             <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
+                <button class="btn"><a href="campdotaz.php" class="btn2">VSTUPENKY</a></button>
             </div>
         </div>
 
         <div class="ticket">
-            <img src="images/orange.jpg" alt="Tent village vstupenka">
+            <a href="campdotaz.php"><img src="images/orange.jpg" alt="Tent village vstupenka"></a>
             <div class="ticket-text">
                 <h3>Tent Village 2. - 7.7.2025</h3>
                 <p>Village (6 dnů)</p>
                 <p>Cena: 3989 kč</p>
             </div>
             <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
+                <button class="btn"><a href="campdotaz.php" class="btn2">VSTUPENKY</a></button>
             </div>
         </div>
 
         <div class="ticket">
-            <img src="images/purple.jpg" alt="Karavan camp vstupenka">
+            <a href="campdotaz.php"><img src="images/purple.jpg" alt="Karavan camp vstupenka"></a>
             <div class="ticket-text">
                 <h3>Karavan Camp  1. - 6.7.2025</h3>
                 <p>Camp (6 dnů)</p>
                 <p>Cena: 5689 kč</p>
             </div>
             <div class="ticket-btn">
-                <button class="btn"><a href="vstupenkydotaz.html" class="btn2">VSTUPENKY</a></button>
+                <button class="btn"><a href="campdotaz.php" class="btn2">VSTUPENKY</a></button>
             </div>
         </div>
     </div>
@@ -141,10 +119,10 @@
             <p>Telefon: +420 123 456 789</p>
             <p>Adresa: Náměstí 123, Praha, Česká republika</p>
             <p><strong>Mohlo by vás zajímat:</strong></p><br>
-            <a href="ucinkujici.html">Interpreti pro rok 2025</a><br>
-            <a href="vstupenky.html">Vstupenky</a><br>
-            <a href="informace.html">Základní informace</a><br>
-            <a href="DJs.html">Neznámější DJs na festivalu</a><br>
+            <a href="ucinkujici.php">Interpreti pro rok 2025</a><br>
+            <a href="vstupenky.php">Vstupenky</a><br>
+            <a href="informace.php">Základní informace</a><br>
+            <a href="DJs.php">Neznámější DJs na festivalu</a><br>
         </div>
 
         <div class="footer-form">
